@@ -47,7 +47,7 @@ function IntroAbout() {
             >
             <Image
               fluid={data.phone.childImageSharp.fluid}
-              alt='Fell like'
+              alt='Fell like Pro'
             />
             </div>
           </div>

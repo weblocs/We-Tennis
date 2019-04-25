@@ -7,26 +7,27 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link as LinkTo } from "react-scroll";
 
 import styles from "../components/button.module.css"
 
-function Button({ title, link }) {
+function ButtonTo({ title, link }) {
 
   return (
-    <Link
+    <LinkTo
       to={link}
+      spy={true} smooth={true} offset={-25} duration={500}
       className={styles.button}
       activeClassName="active"
     >
       {title}
-    </Link>
+    </LinkTo>
   )
 }
 
-Button.propTypes = {
+ButtonTo.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
 }
 
-export default Button
+export default ButtonTo

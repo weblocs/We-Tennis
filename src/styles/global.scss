@@ -18,6 +18,16 @@ p a {
     color: #f9ce00
 }
 
+.intro {
+    a {
+        text-decoration: none !important;
+        box-shadow: none;
+        :focus, :hover {
+            text-decoration: none;
+        }
+    }
+}
+
 h1,
 h2,
 h3,
@@ -48,6 +58,7 @@ h3 {
     font-size: 35px;
     line-height: 1;
     margin-top: 0;
+    font-weight: 100;
 }
 
 p {
@@ -261,4 +272,6 @@ nav a.linkActive {
     }
 }
 
-
+.typingNames {
+    font-weight: 700;
+}

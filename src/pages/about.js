@@ -14,6 +14,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import IntroAbout from "../components/aboutintro"
 
 import MenuAbout from "../components/menuabout"
+import ButtonTo from "../components/buttonto"
 
 
 class About extends React.Component {
@@ -38,7 +39,7 @@ class About extends React.Component {
         <SectionBlock 
           id="app"
         >
-            <h2>it all started with an idea</h2>
+            <h2>it all started with an idea 💡</h2>
             <h3>#TeamWorkMakesTheDreamWork</h3>
             <p style={{
               marginLeft: `auto`,
@@ -60,6 +61,11 @@ class About extends React.Component {
             So we work closely with sports brands, retailers and clubs to help them connect 
             and engage with a global tennis community. If you want to join in with us in 
             providing the best tennis experience get in touch.</p>
+
+            <ButtonTo
+                title="become part of the journey"
+                link="contact"
+            />
             
         </SectionBlock>
         
@@ -68,7 +74,7 @@ class About extends React.Component {
         
         <SectionBlock
         id="contact">
-            <h2>get in touch</h2>
+            <h2>get in touch 👋</h2>
             <h3>#GotQuestions</h3>
             <p style={{
               marginLeft: `auto`,

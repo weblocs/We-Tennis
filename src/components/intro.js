@@ -5,7 +5,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
+import { Link as LinkTo } from "react-scroll";
 
 import Typing from 'react-typing-animation';
 
@@ -19,7 +19,7 @@ function Intro() {
     render={data => {
   return (
     
-        <div
+        <div class="intro"
           
             style={{
               display: `flex`,
@@ -38,7 +38,7 @@ function Intro() {
             />
               </div>
                 <h1 className={styles.text}>
-                     For
+                     For the
                      <Typing>               
                       Everyday
                       <Typing.Delay ms={1500} /> 
@@ -63,15 +63,26 @@ function Intro() {
                       Everyday
                     </Typing> player
                 </h1>
-                <Image
+                <LinkTo
+                  to='vision'
+                  spy={true} smooth={true} offset={-25} duration={500}
+                >
+                  <Image
                   className={styles.appDownloadButton}
                   fixed={data.iosButton.childImageSharp.fixed}
                   alt='iosButton'
-                />
-                <Image
-                  fixed={data.androidButton.childImageSharp.fixed}
-                  alt='iosButton'
-                />
+                  />
+                </LinkTo>
+
+                <LinkTo
+                  to='vision'
+                  spy={true} smooth={true} offset={-25} duration={500}
+                >
+                  <Image
+                    fixed={data.androidButton.childImageSharp.fixed}
+                    alt='iosButton'
+                  />
+                </LinkTo>
             </div>
                   
             <div class="desktop-only" style={{

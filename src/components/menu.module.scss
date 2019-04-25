@@ -21,7 +21,14 @@ nav {
         padding: 10px 10px;
     }
 
-    a {
+    span {
+        box-shadow: none;
+        display: inline-block;
+        font: 100%/1 "Avenir Next", serif;
+        color: #000;
+    }
+
+    a  {
         box-shadow: none;
         display: inline-block;
         font: 100%/1 "Avenir Next", serif;
@@ -36,7 +43,7 @@ nav {
 
     .innerNav {
         display: flex;
-        a {
+        a, span {
             display: inline-table;
             margin-right: 20px;
             position: relative;

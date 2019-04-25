@@ -16,10 +16,13 @@ import "react-alice-carousel/lib/alice-carousel.css";
  
 import Intro from "../components/intro"
 import Button from "../components/button"
+import ButtonTo from "../components/buttonto"
 
 import Typing from 'react-typing-animation';
 
 import Menu from "../components/menu"
+
+import TextLoop from "react-text-loop";
 
 class BlogIndex extends React.Component {
   render() {
@@ -42,60 +45,29 @@ class BlogIndex extends React.Component {
         <SectionBlock 
           id="app"
         >
-            <h2>introducting the WeTennis app</h2>
+            <h2>introducting the WeTennis app 🚀</h2>
             <h3>#TheATPForEverydayPlayers</h3>
             <p style={{
               marginLeft: `auto`,
               marginRight: `auto`,
               maxWidth: rhythm(32),
             }}>WeTennis is a mobile application that allows tennis players to track their matches and display their tennis career. No matter your age or ability, feel more like  
-             <Typing>               
-    Roger Federer
-    <Typing.Delay ms={1500} /> 
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Serena Williams
-    <Typing.Delay ms={600} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Novak Djokovic
-    <Typing.Delay ms={800} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Naomi Osaka
-    <Typing.Delay ms={600} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Rafa Nadal
-    <Typing.Delay ms={900} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Maria Sharapova
-    <Typing.Delay ms={1500} /> 
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Juan Martín del Potro
-    <Typing.Delay ms={600} />
-    <Typing.Backspace count={25} />
-    <Typing.Delay ms={500} />
-    Petra Kvitová
-    <Typing.Delay ms={800} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Andy Murray
-    <Typing.Delay ms={600} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    Simona Halep
-    <Typing.Delay ms={900} />
-    <Typing.Backspace count={20} />
-    <Typing.Delay ms={500} />
-    favourite tennis player
-  </Typing> 
-   as you build up your stats and engage with your friends on tour.</p>
-            <Button
+              <div></div>
+                <TextLoop className={'typingNames'} interval={1500} fade>
+                    <span>Roger Federer</span>
+                    <span>Serena Williams</span>
+                    <span>Novak Djokovic</span>
+                    <span>Naomi Osaka</span>
+                    <span>Rafa Nadal</span>
+                    <span>Maria Sharapova</span>
+                    <span>Juan Martín del Potro</span>
+                    <span>Petra Kvitová</span>
+                    <span>Andy Murray</span>
+                    <span>Simona Halep</span>
+                </TextLoop>  as you build up your stats and engage with your friends on tour.</p>
+            <ButtonTo
                 title="become part of the community"
-                link="/become-part-of-the-community"
+                link="contact"
             />
             <Button
                 title="learn more about us"
@@ -201,7 +173,7 @@ class BlogIndex extends React.Component {
         
         <SectionBlock
         id="contact">
-            <h2>get in touch</h2>
+            <h2>get in touch 👋</h2>
             <h3>#GotQuestions</h3>
             <p style={{
               marginLeft: `auto`,

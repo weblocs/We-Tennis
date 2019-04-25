@@ -53,7 +53,8 @@ function Menu({ title, link, menu }) {
         >
           about
         </Link>
-        <a href="#">|</a>
+        
+        <span>|</span>
         
         <LinkTo
           to={menu[0]}
@@ -87,7 +88,7 @@ function Menu({ title, link, menu }) {
 
 export const menuQuery = graphql`
   query {
-    file(relativePath: { eq: "logo.png" }) {
+    file(relativePath: { eq: "WeTennis.png" }) {
       childImageSharp {
         fixed(width: 100) {
           ...GatsbyImageSharpFixed

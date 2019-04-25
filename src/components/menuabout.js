@@ -53,7 +53,7 @@ function MenuAbout({ title, link, menu }) {
         >
         about
         </Link>
-        <a href="#">|</a>
+        <span>|</span>
         <LinkTo
           to="app"
           spy={true} smooth={true} offset={-25} duration={500}
@@ -78,7 +78,7 @@ function MenuAbout({ title, link, menu }) {
 
 export const menuAboutQuery = graphql`
   query {
-    file(relativePath: { eq: "logo.png" }) {
+    file(relativePath: { eq: "WeTennis.png" }) {
       childImageSharp {
         fixed(width: 100) {
           ...GatsbyImageSharpFixed

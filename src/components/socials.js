@@ -11,17 +11,17 @@ class Slide extends React.Component {
     
     return (
         <div className={styles.socialIcons}>
-            <a target="_blank" href="https://www.instagram.com/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/">
             <div>
                 <img src={insta} alt="Instagram" />
             </div>
             </a>
-            <a target="_blank" href="mailto:info@wetennis.app">
+            <a target="_blank" rel="noopener noreferrer" href="mailto:info@wetennis.app">
             <div>
                 <img src={email} alt="Email Me" />
             </div>
             </a>
-            <a target="_blank" href="https://www.facebook.com/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/">
             <div>
                 <img src={facebook} alt="Facebook" />
             </div>

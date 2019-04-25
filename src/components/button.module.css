@@ -1,6 +1,6 @@
 .button {
-    background: #ffda28;
-    color: #fff;
+    background: transparent;
+    color: #ffda28;
     padding: 10px 20px;
     border-radius: 30px;
     margin-bottom: 20px;
@@ -11,10 +11,12 @@
     min-width: 170px;
     transition: .2s;
     margin-right: 20px;
+    border: 2px solid #ffda28;
 }
 
 .button:hover {
-    background: #959595;
+    background: #ffda28;
+    color: #fff;
 }
 
 @media(max-width:800px) {
