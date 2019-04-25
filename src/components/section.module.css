@@ -1,0 +1,10 @@
+.pageSection {
+    padding: 100px 0;   
+    text-align: center;
+}
+
+@media(max-width:800px) {
+    .pageSection {
+        padding: 50px 0;
+    }
+}

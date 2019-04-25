@@ -1,0 +1,22 @@
+.text {
+    font-size: 110px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: italic;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@media (max-width: 800px){
+    .text {
+        margin-top: 0;
+        font-size: 55px;
+    }
+
+    
+}
+
+.appDownloadButton {
+    margin-right: 15px;
+}
+

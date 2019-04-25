@@ -1,0 +1,264 @@
+$break-small: 800px;
+
+@font-face {
+    font-family: 'Lazy Dog';
+    src: url(../fonts/lazy_dog.ttf) format('truetype');
+}
+
+html, body {
+    color: #000;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+p a {
+    color: #f9ce00
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+a,
+div,
+footer {
+    font-family: "Avenir Next";
+    color: #000;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Lazy Dog';
+    font-size: 35px;
+    line-height: 1;
+    margin-top: 0;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+footer {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+
+    .half {
+        
+        display: inline-block;
+    }
+}
+
+.slide-text {
+    width: 65%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.phone-box {
+    width: 35%;
+    text-align: right;
+    padding-right: 50px;
+    max-width: 320px;
+}
+
+.slide-text h2 {
+    max-width: 920px;
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 800px){
+    .slide-text h2 {
+        font-size: 26px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+    .slide-text p {
+        font-size: 14px;
+    }
+    .slide-text {
+        width: 65%;
+        margin-bottom: 0px;
+    }
+    .phone-box {
+        width: 35%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.alice-carousel {
+    .alice-carousel__dots-item {
+        width: 35px;
+        height: 7px;
+        border-radius: inherit;
+        background-color: #959595;
+        transition: .2s;
+        margin-right: 8px !important;
+
+        &:hover,
+        &.__active {
+            background-color: #ffd928;
+        }
+    }
+    .alice-carousel__dots {
+        margin: 15px 0 5px;
+        text-align: left;
+        position: relative;
+        top: -150px;
+
+        @media screen and (max-width: $break-small) {
+            top: 0;
+        }
+    }
+}
+
+.blue-line {
+    height: 85px;
+    width: 140%;
+    transform-origin: center;
+    transform: rotate(-30deg);
+    background-color: #51adcf;
+    display: inline-block;
+    position: absolute;
+    top: 473px;
+    left: -250px;
+    z-index: -1;
+}
+
+.yellow-line {
+    height: 85px;
+    width: 140%;
+    transform-origin: center;
+    transform: rotate(-30deg);
+    background-color: #f9ce00;
+    display: inline-block;
+    position: absolute;
+    top: 623px;
+    left: -250px;
+    z-index: -1;
+}
+
+.blue-line-2 {
+    height: 85px;
+    width: 140%;
+    transform-origin: center;
+    transform: rotate(-30deg);
+    background-color: #51adcf;
+    display: inline-block;
+    position: absolute;
+    margin-top: 380px;
+    left: -250px;
+}
+
+.yellow-line-2 {
+    height: 85px;
+    width: 140%;
+    transform-origin: center;
+    transform: rotate(-30deg);
+    background-color: #f9ce00;
+    display: inline-block;
+    position: absolute;
+    margin-top: 530px;
+    left: -250px;
+}
+
+p *:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 800px){
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 2;
+    }
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-photo {
+        margin-bottom: -70px;
+        img {
+            margin-bottom: 0;
+        }
+    }
+
+    
+
+.blue-line, .yellow-line, .blue-line-2, .yellow-line-2 {
+    left: -90px;
+    position: fixed;
+}
+}
+
+nav a.linkActive {
+    color: #f9cf0e !important;
+}
+
+
+
+@media (max-width: 800px) {
+
+    nav a.linkActive {
+        display: none !important;
+    }
+
+    .about-h1 h1 {
+
+    font-size: 35px;
+    }
+}
+
+
