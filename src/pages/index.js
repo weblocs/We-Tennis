@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
     super(props);
     this.openForm = this.openForm.bind(this);
   }
-
+  
   openForm() {
     this.typeformEmbed.typeform.open();
   }
@@ -213,6 +213,8 @@ class BlogIndex extends React.Component {
     )
   }
 }
+
+
 
 export default BlogIndex
 

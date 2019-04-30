@@ -25,7 +25,7 @@ class About extends React.Component {
     super(props);
     this.openForm = this.openForm.bind(this);
   }
-
+  
   openForm() {
     this.typeformEmbed.typeform.open();
   }
@@ -110,6 +110,7 @@ class About extends React.Component {
     )
   }
 }
+
 
 export default About
 
