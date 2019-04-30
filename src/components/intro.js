@@ -39,7 +39,9 @@ function Intro() {
               </div>
                 <h1 className={styles.text}>
                      For the
-                     <Typing>               
+                     everyday
+                     player
+                     {/* <Typing>               
                       Everyday
                       <Typing.Delay ms={1500} /> 
                       <Typing.Backspace count={8} />
@@ -61,7 +63,8 @@ function Intro() {
                       <Typing.Backspace count={3} />
                       <Typing.Delay ms={500} />
                       Everyday
-                    </Typing> player
+                    </Typing>  */}
+                    
                 </h1>
                 <LinkTo
                   to='vision'

@@ -16,7 +16,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
  
 import Intro from "../components/intro"
 import Button from "../components/button"
-import ButtonTo from "../components/buttonto"
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 import Typing from 'react-typing-animation';
 
@@ -25,6 +25,14 @@ import Menu from "../components/menu"
 import TextLoop from "react-text-loop";
 
 class BlogIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openForm = this.openForm.bind(this);
+  }
+
+  openForm() {
+    this.typeformEmbed.typeform.open();
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -41,7 +49,9 @@ class BlogIndex extends React.Component {
                 menu={[`app`, `vision`, `about`, `contact`]}
             />
         </header>
+
         <Intro />
+
         <SectionBlock 
           id="app"
         >
@@ -53,7 +63,7 @@ class BlogIndex extends React.Component {
               maxWidth: rhythm(32),
             }}>WeTennis is a mobile application that allows tennis players to track their matches and display their tennis career. No matter your age or ability, feel more like  
               <div></div>
-                <TextLoop className={'typingNames'} interval={1500} fade>
+                <TextLoop className={'typingNames'} interval={1000} fade>
                     <span>Roger Federer</span>
                     <span>Serena Williams</span>
                     <span>Novak Djokovic</span>
@@ -65,14 +75,27 @@ class BlogIndex extends React.Component {
                     <span>Andy Murray</span>
                     <span>Simona Halep</span>
                 </TextLoop>  as you build up your stats and engage with your friends on tour.</p>
-            <ButtonTo
-                title="become part of the community"
-                link="contact"
-            />
+
+              
+                <ReactTypeformEmbed 
+                  popup
+                  autoOpen={false}
+                  url="https://maciek25.typeform.com/to/I0pZuz"
+                  hideHeaders
+                  hideFooter
+                  buttonText="Go!"
+                  style={{ top: 100 }}
+                  ref={tf => {
+                    this.typeformEmbed = tf;
+                  }} />    
+                  <button onClick={this.openForm}> become part of the community </button>
+            
+            
             <Button
                 title="learn more about us"
                 link="/about"
             />
+            
         </SectionBlock>
         
         <SectionBlock 

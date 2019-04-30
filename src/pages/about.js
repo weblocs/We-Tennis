@@ -17,7 +17,18 @@ import MenuAbout from "../components/menuabout"
 import ButtonTo from "../components/buttonto"
 
 
+import { ReactTypeformEmbed } from 'react-typeform-embed';
+
+
 class About extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openForm = this.openForm.bind(this);
+  }
+
+  openForm() {
+    this.typeformEmbed.typeform.open();
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -62,10 +73,18 @@ class About extends React.Component {
             and engage with a global tennis community. If you want to join in with us in 
             providing the best tennis experience get in touch.</p>
 
-            <ButtonTo
-                title="become part of the journey"
-                link="contact"
-            />
+            <ReactTypeformEmbed 
+                  popup
+                  autoOpen={false}
+                  url="https://maciek25.typeform.com/to/I0pZuz"
+                  hideHeaders
+                  hideFooter
+                  buttonText="Go!"
+                  style={{ top: 100 }}
+                  ref={tf => {
+                    this.typeformEmbed = tf;
+                  }} />    
+                  <button onClick={this.openForm}> become part of the journey </button>
             
         </SectionBlock>
         

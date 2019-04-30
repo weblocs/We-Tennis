@@ -12,6 +12,9 @@
     transition: .2s;
     margin-right: 20px;
     border: 2px solid #ffda28;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline;
 }
 
 .button:hover {
@@ -21,7 +24,7 @@
 
 @media(max-width:800px) {
     .button {
-        display: block;
+        display: inline-block;
         font-size: 14px;
     }
 }

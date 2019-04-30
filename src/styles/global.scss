@@ -110,7 +110,7 @@ footer {
 
 @media (max-width: 800px){
     .slide-text h2 {
-        font-size: 26px;
+        font-size: 24px;
         line-height: 26px;
         margin-bottom: 10px;
     }
@@ -274,4 +274,59 @@ nav a.linkActive {
 
 .typingNames {
     font-weight: 700;
+}
+
+
+button {
+    background: transparent;
+    color: #ffda28;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.39px;
+    border: none;
+    min-width: 170px;
+    transition: .2s;
+    margin-right: 20px;
+    border: 2px solid #ffda28;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline;
+    outline: none;
+}
+
+button:hover {
+    background: #ffda28;
+    color: #fff;
+}
+
+@media(max-width:800px) {
+    button {
+        display: inline-block;
+        font-size: 14px;
+    }
+}
+
+.popup-overlay {
+    background: #000;
+    opacity: 0.3;
+}
+
+.popup-content {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 462px !important;
+    height: 462px !important;
+}
+
+.popup-content div:nth-child(1) {
+    display: none !important;
+}
+
+iframe {
+    border: none;
 }
