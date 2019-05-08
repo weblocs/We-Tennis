@@ -16,11 +16,9 @@ import "react-alice-carousel/lib/alice-carousel.css";
  
 import Intro from "../components/intro"
 import Button from "../components/button"
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 
-import Typing from 'react-typing-animation';
 
-import Menu from "../components/menu"
+import Menu from "../components/menuabout"
 
 import TextLoop from "react-text-loop";
 
@@ -55,7 +53,7 @@ class BlogIndex extends React.Component {
         <SectionBlock 
           id="app"
         >
-            <h2>introducting the WeTennis app 🚀</h2>
+            <h2>introducting the WeTennis app <span>🚀</span></h2>
             <h3>#TheATPForEverydayPlayers</h3>
             <p style={{
               marginLeft: `auto`,
@@ -77,18 +75,8 @@ class BlogIndex extends React.Component {
                 </TextLoop>  as you build up your stats and engage with your friends on tour.</p>
 
               
-                <ReactTypeformEmbed 
-                  popup
-                  autoOpen={false}
-                  url="https://maciek25.typeform.com/to/I0pZuz"
-                  hideHeaders
-                  hideFooter
-                  buttonText="Go!"
-                  style={{ top: 100 }}
-                  ref={tf => {
-                    this.typeformEmbed = tf;
-                  }} />    
-                  <button onClick={this.openForm}> become part of the community </button>
+                 
+                  <button className="btn"> become part of the community </button>
             
             
                   <Button

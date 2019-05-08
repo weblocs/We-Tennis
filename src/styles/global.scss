@@ -5,10 +5,24 @@ $break-small: 800px;
     src: url(../fonts/lazy_dog.ttf) format('truetype');
 }
 
+
 html, body {
     color: #000;
     overflow-x: hidden;
 }
+
+@media(max-width: 800px){
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logotype {
+    margin-left: 15px;
+}
+}
+
+
 
 a {
     cursor: pointer;
@@ -276,8 +290,11 @@ nav a.linkActive {
     font-weight: 700;
 }
 
-
 button {
+    outline: none;
+}
+
+button.btn {
     background: transparent;
     color: #ffda28;
     padding: 10px 20px;
@@ -297,13 +314,23 @@ button {
     outline: none;
 }
 
-button:hover {
+button.btn:hover {
     background: #ffda28;
     color: #fff;
 }
 
+.onlyMobile {
+    display: none;
+}
+
 @media(max-width:800px) {
-    button {
+    .onlyMobile {
+        display: block;
+    }
+    .onlyDesktop {
+        display: none !important;
+    }
+    button.btn {
         display: inline-block;
         font-size: 14px;
     }
@@ -330,3 +357,14 @@ button:hover {
 iframe {
     border: none;
 }
+
+.hamburger-box {
+    margin-top: 22px;
+}
+
+.hamburger {
+    padding: 0 !important; 
+}
+
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss"
+

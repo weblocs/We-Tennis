@@ -1,5 +1,6 @@
 $break-small: 800px;
 
+
 nav a.linkActive {
     color: #f9cf0e;
 }
@@ -72,5 +73,31 @@ nav {
         }
     }
 }
+
+.mobileMenu {
+    position: fixed;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: auto;
+    transition: .4s;
+    z-index: 3;
+    .mobileInner {
+        position: relative;
+    }
+    &.hide .mobileInner {
+        display: none;
+    }
+    a {
+        display: block;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: right;
+        position: relative;
+    }
+}
+
 
 

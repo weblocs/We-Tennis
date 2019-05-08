@@ -14,7 +14,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import IntroAbout from "../components/aboutintro"
 
 import MenuAbout from "../components/menuabout"
-import ButtonTo from "../components/buttonto"
 
 
 import { ReactTypeformEmbed } from 'react-typeform-embed';
@@ -84,7 +83,7 @@ class About extends React.Component {
                   ref={tf => {
                     this.typeformEmbed = tf;
                   }} />    
-                  <button onClick={this.openForm}> become part of the journey </button>
+                  <button className="btn" onClick={this.openForm}> become part of the journey </button>
             
         </SectionBlock>
         

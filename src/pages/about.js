@@ -11,13 +11,11 @@ import "../styles/global.scss"
 
 import "react-alice-carousel/lib/alice-carousel.css";
  
-import IntroAbout from "../components/aboutintro"
 
 import MenuAbout from "../components/menuabout"
 import Hero from "../components/hero"
 
 
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 
 class About extends React.Component {
@@ -77,18 +75,7 @@ class About extends React.Component {
             and engage with a global tennis community. If you want to join in with us in 
             providing the best tennis experience get in touch.</p>
 
-            <ReactTypeformEmbed 
-                  popup
-                  autoOpen={false}
-                  url="https://maciek25.typeform.com/to/I0pZuz"
-                  hideHeaders
-                  hideFooter
-                  buttonText="Go!"
-                  style={{ top: 100 }}
-                  ref={tf => {
-                    this.typeformEmbed = tf;
-                  }} />    
-                  <button onClick={this.openForm}> become part of the journey </button>
+                  <button className="btn"> become part of the journey </button>
             
         </SectionBlock>
         
