@@ -196,7 +196,7 @@ class BlogIndex extends React.Component {
         
         <SectionBlock
         id="contact">
-            <h2>get in touch 👋</h2>
+            <h2>get in touch <span>👋</span></h2>
             <h3>#GotQuestions</h3>
             <p style={{
               marginLeft: `auto`,

@@ -14,7 +14,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import IntroAbout from "../components/aboutintro"
 
 import MenuAbout from "../components/menuabout"
-import Hero from "../components/hero"
+import ButtonTo from "../components/buttonto"
 
 
 import { ReactTypeformEmbed } from 'react-typeform-embed';
@@ -33,9 +33,6 @@ class About extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     return (
-    <div>
-            <Hero />
-        
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="About"
@@ -49,8 +46,7 @@ class About extends React.Component {
                 links={[`app`, `vision`, `about`, `contact`]}
             />
         </header>
-        
-        
+        <IntroAbout />
         <SectionBlock 
           id="app"
         >
@@ -111,7 +107,6 @@ class About extends React.Component {
         </SectionBlock>
         
       </Layout>
-    </div>
     )
   }
 }
