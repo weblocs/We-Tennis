@@ -28,9 +28,7 @@ function MenuAbout({ title, link, menu }) {
 
     return (
       <nav>  
-        
-      
-      
+
       <Link
         to={link}
         className={styles.button}
@@ -39,6 +37,33 @@ function MenuAbout({ title, link, menu }) {
         <Image fixed={data.file.childImageSharp.fixed} />
       </Link>
       <div className={styles.innerNav}>
+
+        <Link
+          to="/about"
+          activeClassName="active"
+        >
+          about
+        </Link>
+
+        <LinkTo
+          to="app"
+          spy={true} smooth={true} offset={-30} duration={500}
+          activeClassName="active"
+        >
+          app
+        </LinkTo>
+
+        <LinkTo
+          to="contact"
+          spy={true} smooth={true} offset={-80} duration={500}
+          activeClassName="active"
+        >
+          contact
+        </LinkTo>
+        
+      
+      
+      {/* 
         
         <Link
           to="/" 
@@ -68,7 +93,7 @@ function MenuAbout({ title, link, menu }) {
           activeClassName="active"
         >
           {menu[3]} 
-        </LinkTo>
+        </LinkTo> */}
       </div>
       </nav>
     )  

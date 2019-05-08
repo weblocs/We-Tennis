@@ -41,6 +41,29 @@ function Menu({ title, link, menu }) {
       <div className={styles.innerNav}>
 
       <Link
+          to="/about"
+          activeClassName="active"
+        >
+          about
+        </Link>
+
+        <LinkTo
+          to="app"
+          spy={true} smooth={true} offset={-80} duration={500}
+          activeClassName="active"
+        >
+          app
+        </LinkTo>
+
+        <LinkTo
+          to="contact"
+          spy={true} smooth={true} offset={-80} duration={500}
+          activeClassName="active"
+        >
+          contact
+        </LinkTo>
+
+      {/* <Link
           to="/" 
           activeClassName="active"
           className="linkActive"
@@ -78,7 +101,7 @@ function Menu({ title, link, menu }) {
           activeClassName="active"
         >
           {menu[3]} 
-        </LinkTo>
+        </LinkTo> */}
       </div>
       </nav>
     )  

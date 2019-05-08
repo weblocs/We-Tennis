@@ -91,10 +91,10 @@ class BlogIndex extends React.Component {
                   <button onClick={this.openForm}> become part of the community </button>
             
             
-            <Button
-                title="learn more about us"
-                link="/about"
-            />
+                  <Button
+                      title="learn more about us"
+                      link="/about"
+                  />
             
         </SectionBlock>
         
