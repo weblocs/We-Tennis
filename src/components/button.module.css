@@ -1,11 +1,11 @@
 .button {
     background: transparent;
     color: #ffda28;
-    padding: 10px 20px;
+    padding: 13px 22px;
     border-radius: 30px;
     margin-bottom: 20px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 1.39px;
     border: none;
     min-width: 170px;
@@ -15,6 +15,7 @@
     box-shadow: none;
     cursor: pointer;
     display: inline;
+    font-weight: 500;
 }
 
 .button:hover {
