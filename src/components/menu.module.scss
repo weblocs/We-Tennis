@@ -76,7 +76,7 @@ nav {
 
 .mobileMenu {
     position: fixed;
-    top: 67px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -96,6 +96,8 @@ nav {
         font-weight: 600;
         text-align: right;
         position: relative;
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
     }
 }
 
