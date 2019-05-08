@@ -50,6 +50,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
     font-weight: 700;
     @media(max-width:800px){
         font-size: 60px;
+        margin-bottom: 80px;
     }
   }
   
