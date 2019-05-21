@@ -1,4 +1,4 @@
-.button {
+.button, input[type="submit"] {
     background: transparent;
     color: #ffda28;
     padding: 13px 22px;
@@ -18,7 +18,13 @@
     font-weight: 500;
 }
 
-.button:hover {
+input[type="submit"] {
+    margin-right: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.button:hover, input[type="submit"]:hover {
     background: #ffda28;
     color: #fff;
 }

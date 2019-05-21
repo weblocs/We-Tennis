@@ -346,13 +346,13 @@ button.btn:hover {
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%);
-    width: 462px !important;
-    height: 462px !important;
+    min-width: 462px !important;
+    min-height: 462px !important;
 }
 
-.popup-content div:nth-child(1) {
-    display: none !important;
-}
+// .popup-content div:nth-child(1) {
+//     display: none !important;
+// }
 
 iframe {
     border: none;
@@ -366,5 +366,22 @@ iframe {
     padding: 0 !important; 
 }
 
+
+
+form span, form input {
+    font-family: "Avenir Next" !important;
+}
+
+.MuiStepper-root-5 {
+    padding-bottom: 0 !important;
+}
+
+.nodisplay {
+    display: none !important;
+}
+
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss"
+
+
+
 

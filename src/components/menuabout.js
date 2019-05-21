@@ -49,7 +49,7 @@ class MenuAbout extends React.Component {
                     to="/about"
                     activeClassName="active"
                   >
-                    about
+                    features
                   </Link>
 
                   <LinkTo
@@ -61,7 +61,7 @@ class MenuAbout extends React.Component {
                     duration={500}
                     activeClassName="active"
                   >
-                    app
+                    mission
                   </LinkTo>
 
                   <LinkTo
@@ -83,7 +83,7 @@ class MenuAbout extends React.Component {
                 onClick={() =>
                   this.setState({ active: !this.state.active })
                 } >
-                  about
+                  features
                 </Link>
 
                 <LinkTo
@@ -97,7 +97,7 @@ class MenuAbout extends React.Component {
                     this.setState({ active: !this.state.active })
                   }
                 >
-                  app
+                  mission
                 </LinkTo>
 
                 <LinkTo

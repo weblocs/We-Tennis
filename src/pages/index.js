@@ -3,7 +3,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
 
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import SectionBlock from "../components/section"
@@ -11,24 +10,26 @@ import SectionBlock from "../components/section"
 import { rhythm } from "../utils/typography"
 import "../styles/global.scss"
 
-import Popup from "reactjs-popup";
-import AliceCarousel from 'react-alice-carousel';
-import "react-alice-carousel/lib/alice-carousel.css";
- 
+import Popup from "reactjs-popup"
+import AliceCarousel from "react-alice-carousel"
+import "react-alice-carousel/lib/alice-carousel.css"
+
 import Intro from "../components/intro"
 import Button from "../components/button"
 import Menu from "../components/menuabout"
 
-import TextLoop from "react-text-loop";
+import MailForm from "../components/mailForm"
+
+import TextLoop from "react-text-loop"
 
 class BlogIndex extends React.Component {
   constructor(props) {
-    super(props);
-    this.openForm = this.openForm.bind(this);
+    super(props)
+    this.openForm = this.openForm.bind(this)
   }
-  
+
   openForm() {
-    this.typeformEmbed.typeform.open();
+    this.typeformEmbed.typeform.open()
   }
   render() {
     const { data } = this.props
@@ -40,184 +41,204 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <header>
-            <Menu
-                title="Title"
-                link="/"
-                menu={[`app`, `vision`, `about`, `contact`]}
-            />
+          <Menu
+            title="Title"
+            link="/"
+            menu={[`app`, `vision`, `about`, `contact`]}
+          />
         </header>
 
         <Intro />
 
-        
-
-        <SectionBlock 
-          id="app"
-        >
-            <h2>introducting the WeTennis app <span>🚀</span></h2>
-            <h3>#TheATPForEverydayPlayers</h3>
-            <p style={{
+        <SectionBlock id="app">
+          <h2>
+            introducting the WeTennis app <span>🚀</span>
+          </h2>
+          <h3>#TheATPForEverydayPlayers</h3>
+          <p
+            style={{
               marginLeft: `auto`,
               marginRight: `auto`,
               maxWidth: rhythm(32),
-            }}>WeTennis is a mobile application that allows tennis players to track their matches and display their tennis career. No matter your age or ability, feel more like  
-              <div></div>
-                <TextLoop className={'typingNames'} interval={1000} fade>
-                    <span>Roger Federer</span>
-                    <span>Serena Williams</span>
-                    <span>Novak Djokovic</span>
-                    <span>Naomi Osaka</span>
-                    <span>Rafa Nadal</span>
-                    <span>Maria Sharapova</span>
-                    <span>Juan Martín del Potro</span>
-                    <span>Petra Kvitová</span>
-                    <span>Andy Murray</span>
-                    <span>Simona Halep</span>
-                </TextLoop>  as you build up your stats and engage with your friends on tour.</p>
+            }}
+          >
+            WeTennis is a mobile application that allows tennis players to track
+            their matches and display their tennis career. No matter your age or
+            ability, feel more like
+            <div />
+            <TextLoop className={"typingNames"} interval={1000} fade>
+              <span>Roger Federer</span>
+              <span>Serena Williams</span>
+              <span>Novak Djokovic</span>
+              <span>Naomi Osaka</span>
+              <span>Rafa Nadal</span>
+              <span>Maria Sharapova</span>
+              <span>Juan Martín del Potro</span>
+              <span>Petra Kvitová</span>
+              <span>Andy Murray</span>
+              <span>Simona Halep</span>
+            </TextLoop>{" "}
+            as you build up your stats and engage with your friends on tour.
+          </p>
 
-              
-                 
-                  
+          <Popup
+            trigger={
+              <button className="btn"> become part of the community </button>
+            }
+            position="right center"
+          >
+            <div style={{marginTop: 0}}>
+              <form method="POST" action="https://arpi.com/email/">
+                <MailForm />
+              </form>
+            </div>
+          </Popup>
 
-                  <Popup trigger={<button className="btn"> become part of the community </button>} position="right center">
-    <div><form method="POST" action="https://arpi.com/email/">
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form></div>
-  </Popup>
-            
-            
-                  <Button
-                      title="learn more about us"
-                      link="/about"
-                  />
-            
+          <Button title="learn more about us" link="/about" />
         </SectionBlock>
-        
-        <SectionBlock 
-          id="vision"
-        >
 
-          <div class="blue-line-2"></div>
-          <div class="yellow-line-2"></div>
+        <SectionBlock id="vision">
+          <div class="blue-line-2" />
+          <div class="yellow-line-2" />
 
-        <AliceCarousel 
+          <AliceCarousel
             mouseDragEnabled
             autoPlayInterval={4000}
             duration={700}
             autoPlay={true}
-            buttonsDisabled={true} 
+            buttonsDisabled={true}
             stopAutoPlayOnHover={false}
-        >
+          >
             <div class="container">
-                <div class="half slide-text">
-                    <h2>STAY CONNECTED</h2>
-                    <p style={{
-                      maxWidth: rhythm(14),
-                    }}>invite your tennis friends and keep updated on their tennis activity</p>  
-                </div>
-                <div class="half phone-box">
-                    <Image
-                      fluid={data.stay.childImageSharp.fluid}
-                      alt='Fell like Pro'
-                    />
-                </div>
+              <div class="half slide-text">
+                <h2>STAY CONNECTED</h2>
+                <p
+                  style={{
+                    maxWidth: rhythm(14),
+                  }}
+                >
+                  invite your tennis friends and keep updated on their tennis
+                  activity
+                </p>
+              </div>
+              <div class="half phone-box">
+                <Image
+                  fluid={data.stay.childImageSharp.fluid}
+                  alt="Fell like Pro"
+                />
+              </div>
             </div>
             <div class="container">
-                <div class="half slide-text">
-                    <h2 style={{
-                      maxWidth: rhythm(22),
-                    }}>DISCOVER NEW PLAYERS</h2>
-                    <p style={{
-                      maxWidth: 360,
-                    }}>search players and groups to interact with your local community</p>  
-                </div>
-                <div class="half phone-box">
-                    <Image
-                      fluid={data.discover.childImageSharp.fluid}
-                      alt='Fell like Pro'
-                    />
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="half slide-text">
-                    <h2>COMPARE HISTROY</h2>
-                    <p style={{
-                      maxWidth: 400,
-                    }}>create long lasting rivalries with friends and compare histroy of matches played</p>  
-                </div>
-                <div class="half phone-box">
-                    <Image
-                      fluid={data.compare.childImageSharp.fluid}
-                      alt='Fell like Pro'
-                    />
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="half slide-text">
-                    <h2>COMPETE IN LEADERBOARDS</h2>
-                    <p style={{
-                      maxWidth: 445,
-                    }}>create custom groups to gain and lose points, so you’ll have to fight to stay on top</p>  
-                </div>
-                <div class="half phone-box">
-                    <Image
-                      fluid={data.compete.childImageSharp.fluid}
-                      alt='Fell like Pro'
-                    />
-                </div>
+              <div class="half slide-text">
+                <h2
+                  style={{
+                    maxWidth: rhythm(22),
+                  }}
+                >
+                  DISCOVER NEW PLAYERS
+                </h2>
+                <p
+                  style={{
+                    maxWidth: 360,
+                  }}
+                >
+                  search players and groups to interact with your local
+                  community
+                </p>
+              </div>
+              <div class="half phone-box">
+                <Image
+                  fluid={data.discover.childImageSharp.fluid}
+                  alt="Fell like Pro"
+                />
+              </div>
             </div>
 
             <div class="container">
-                <div class="half slide-text">
-                    <h2>DISPLAY<div></div> STATS</h2>
-                    <p style={{
-                      maxWidth: 460,
-                    }}>see you track record and match stats<div></div> like win/loss ratio, tiebreak ratio and more</p>  
-                </div>
-                <div class="half phone-box">
-                    <Image
-                      fluid={data.display.childImageSharp.fluid}
-                      alt='Fell like Pro'
-                    />
-                </div>
+              <div class="half slide-text">
+                <h2>COMPARE HISTROY</h2>
+                <p
+                  style={{
+                    maxWidth: 400,
+                  }}
+                >
+                  create long lasting rivalries with friends and compare histroy
+                  of matches played
+                </p>
+              </div>
+              <div class="half phone-box">
+                <Image
+                  fluid={data.compare.childImageSharp.fluid}
+                  alt="Fell like Pro"
+                />
+              </div>
             </div>
-            
-        </AliceCarousel>
+
+            <div class="container">
+              <div class="half slide-text">
+                <h2>COMPETE IN LEADERBOARDS</h2>
+                <p
+                  style={{
+                    maxWidth: 445,
+                  }}
+                >
+                  create custom groups to gain and lose points, so you’ll have
+                  to fight to stay on top
+                </p>
+              </div>
+              <div class="half phone-box">
+                <Image
+                  fluid={data.compete.childImageSharp.fluid}
+                  alt="Fell like Pro"
+                />
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="half slide-text">
+                <h2>
+                  DISPLAY<div /> STATS
+                </h2>
+                <p
+                  style={{
+                    maxWidth: 460,
+                  }}
+                >
+                  see you track record and match stats<div /> like win/loss
+                  ratio, tiebreak ratio and more
+                </p>
+              </div>
+              <div class="half phone-box">
+                <Image
+                  fluid={data.display.childImageSharp.fluid}
+                  alt="Fell like Pro"
+                />
+              </div>
+            </div>
+          </AliceCarousel>
         </SectionBlock>
-        
-    
-        
-        <SectionBlock
-        id="contact">
-            <h2>get in touch <span>👋</span></h2>
-            <h3>#GotQuestions</h3>
-            <p style={{
+
+        <SectionBlock id="contact">
+          <h2>
+            get in touch <span>👋</span>
+          </h2>
+          <h3>#GotQuestions</h3>
+          <p
+            style={{
               marginLeft: `auto`,
               marginRight: `auto`,
               maxWidth: rhythm(16),
-            }}>
-            To access our press kit or partner with us
-            or even if it’s just to ask a question drop
-            us an email at <a href="mailto:info@wetennis.app">info@wetennis.app</a>
-            </p>
+            }}
+          >
+            To access our press kit or partner with us or even if it’s just to
+            ask a question drop us an email at{" "}
+            <a href="mailto:info@wetennis.app">info@wetennis.app</a>
+          </p>
         </SectionBlock>
-        
       </Layout>
     )
   }
 }
-
-
 
 export default BlogIndex
 
@@ -244,12 +265,12 @@ export const pageQuery = graphql`
       }
     }
     phone: file(absolutePath: { regex: "/phone_feel_like_pro.png/" }) {
-          childImageSharp {
-            fluid(maxWidth: 400, quality: 100) {
-              ...GatsbyImageSharpFluid
-              presentationWidth
-            }
-          }
+      childImageSharp {
+        fluid(maxWidth: 400, quality: 100) {
+          ...GatsbyImageSharpFluid
+          presentationWidth
+        }
+      }
     }
     stay: file(absolutePath: { regex: "/stay.png/" }) {
       childImageSharp {

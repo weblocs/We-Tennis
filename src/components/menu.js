@@ -44,7 +44,7 @@ function Menu({ title, link, menu }) {
           to="/about"
           activeClassName="active"
         >
-          about
+          features
         </Link>
 
         <LinkTo

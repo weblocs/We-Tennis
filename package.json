@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "gatsby": "^2.3.5",
     "gatsby-background-image": "^0.5.5",
     "gatsby-image": "^2.0.37",
