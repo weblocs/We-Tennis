@@ -59,7 +59,7 @@ class BlogIndex extends React.Component {
             style={{
               marginLeft: `auto`,
               marginRight: `auto`,
-              maxWidth: rhythm(32),
+              maxWidth: rhythm(34),
             }}
           >
             WeTennis is community and performance based platform for amateur tennis players worldwide. No matter your age or ability, our app is designed to make you feel more like
