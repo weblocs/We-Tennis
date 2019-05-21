@@ -11,13 +11,12 @@ import SectionBlock from "../components/section"
 import { rhythm } from "../utils/typography"
 import "../styles/global.scss"
 
+import Popup from "reactjs-popup";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
  
 import Intro from "../components/intro"
 import Button from "../components/button"
-
-
 import Menu from "../components/menuabout"
 
 import TextLoop from "react-text-loop";
@@ -50,17 +49,7 @@ class BlogIndex extends React.Component {
 
         <Intro />
 
-        <form name="contact" netlify>
-  <p>
-    <label>Name <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Email <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+        
 
         <SectionBlock 
           id="app"
@@ -88,7 +77,21 @@ class BlogIndex extends React.Component {
 
               
                  
-                  <button className="btn"> become part of the community </button>
+                  
+
+                  <Popup trigger={<button className="btn"> become part of the community </button>} position="right center">
+    <div><form method="POST" action="https://arpi.com/email/">
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form></div>
+  </Popup>
             
             
                   <Button
