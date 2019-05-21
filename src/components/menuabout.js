@@ -23,6 +23,7 @@ class MenuAbout extends React.Component {
           return (
             <div>
               <nav>
+                
                 <Link
                   to={this.props.link}
                   className={styles.button}
@@ -76,6 +77,7 @@ class MenuAbout extends React.Component {
                     contact
                   </LinkTo>
                 </div>
+                
               </nav>
               <div className={`${styles.mobileMenu} ${!this.state.active ? styles.hide : ''}`} >
               <div className={styles.mobileInner}>

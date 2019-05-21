@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
 
         <SectionBlock id="app">
           <h2>
-            introducting the WeTennis app <span>🚀</span>
+          Introducing the WeTennis app <span>🚀</span>
           </h2>
           <h3>#TheATPForEverydayPlayers</h3>
           <p

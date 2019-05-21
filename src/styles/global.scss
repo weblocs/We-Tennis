@@ -380,6 +380,10 @@ form span, form input {
     display: none !important;
 }
 
+.maxWidth {
+    max-width: 1200px;
+}
+
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss"
 
 
