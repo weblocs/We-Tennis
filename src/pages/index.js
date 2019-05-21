@@ -62,9 +62,7 @@ class BlogIndex extends React.Component {
               maxWidth: rhythm(32),
             }}
           >
-            WeTennis is a mobile application that allows tennis players to track
-            their matches and display their tennis career. No matter your age or
-            ability, feel more like
+            WeTennis is community and performance based platform for amateur tennis players worldwide. No matter your age or ability, our app is designed to make you feel more like
             <div />
             <TextLoop className={"typingNames"} interval={1000} fade>
               <span>Roger Federer</span>
@@ -78,12 +76,12 @@ class BlogIndex extends React.Component {
               <span>Andy Murray</span>
               <span>Simona Halep</span>
             </TextLoop>{" "}
-            as you build up your stats and engage with your friends on tour.
+            and connect with your local tennis community to feel more like a pro.
           </p>
 
           <Popup
             trigger={
-              <button className="btn"> become part of the community </button>
+              <button className="btn"> join our community </button>
             }
             position="right center"
           >
@@ -230,8 +228,7 @@ class BlogIndex extends React.Component {
               maxWidth: rhythm(16),
             }}
           >
-            To access our press kit or partner with us or even if it’s just to
-            ask a question drop us an email at{" "}
+            to access our press kit, partner with us or to just ask us a question, drop us an email at{" "}
             <a href="mailto:info@wetennis.app">info@wetennis.app</a>
           </p>
         </SectionBlock>

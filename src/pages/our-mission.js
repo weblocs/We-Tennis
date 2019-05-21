@@ -91,9 +91,7 @@ class About extends React.Component {
               marginRight: `auto`,
               maxWidth: rhythm(16),
             }}>
-            To access our press kit or partner with us
-            or even if it’s just to ask a question drop
-            us an email at <a href="mailto:info@wetennis.app">info@wetennis.app</a>
+            to access our press kit, partner with us or to just ask us a question, drop us an email at <a href="mailto:info@wetennis.app">info@wetennis.app</a>
             </p>
         </SectionBlock>
         

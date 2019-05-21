@@ -22,6 +22,8 @@ class MenuAbout extends React.Component {
         render={data => {
           return (
             <div>
+              <div className="maxWidth">
+              </div>
               <nav>
                 
                 <Link
@@ -47,10 +49,10 @@ class MenuAbout extends React.Component {
 
                   <Link
                     className="onlyDesktop"
-                    to="/about"
+                    to="/our-mission"
                     activeClassName="active"
                   >
-                    features
+                    mission
                   </Link>
 
                   <LinkTo
@@ -62,7 +64,7 @@ class MenuAbout extends React.Component {
                     duration={500}
                     activeClassName="active"
                   >
-                    mission
+                    features
                   </LinkTo>
 
                   <LinkTo
@@ -79,13 +81,14 @@ class MenuAbout extends React.Component {
                 </div>
                 
               </nav>
+              
               <div className={`${styles.mobileMenu} ${!this.state.active ? styles.hide : ''}`} >
               <div className={styles.mobileInner}>
-                <Link to="/about" activeClassName="active" 
+                <Link to="/our-mission" activeClassName="active" 
                 onClick={() =>
                   this.setState({ active: !this.state.active })
                 } >
-                  features
+                  mission
                 </Link>
 
                 <LinkTo
@@ -99,7 +102,7 @@ class MenuAbout extends React.Component {
                     this.setState({ active: !this.state.active })
                   }
                 >
-                  mission
+                  features
                 </LinkTo>
 
                 <LinkTo
