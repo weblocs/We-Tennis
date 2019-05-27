@@ -9,6 +9,9 @@ import { Link as LinkTo } from "react-scroll";
 
 import Typing from 'react-typing-animation';
 
+import MailForm from "./mailForm"
+import Popup from "reactjs-popup"
+
 import styles from "./intro.module.scss"
 import { rhythm } from "../utils/typography"
 
@@ -66,16 +69,25 @@ function Intro() {
                     </Typing>  */}
                     
                 </h1>
-                <LinkTo
-                  to='vision'
-                  spy={true} smooth={true} offset={-25} duration={500}
-                >
-                  <Image
+
+                <Popup
+            trigger={
+              <Image
                   className={styles.appDownloadButton}
                   fixed={data.iosButton.childImageSharp.fixed}
                   alt='iosButton'
                   />
-                </LinkTo>
+            }
+            position="right center"
+          >
+            <div style={{marginTop: 0}}>
+              <form method="POST" action="https://arpi.com/email/">
+                <MailForm />
+              </form>
+            </div>
+          </Popup>
+
+                
 
                 <LinkTo
                   to='vision'

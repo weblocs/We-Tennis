@@ -26,7 +26,7 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ['Your Name', 'Create an ad group', 'Create an ad'];
+  return ['Your Name', 'Create ad group', 'Create ad'];
 }
 
 function getStepContent(stepIndex) {

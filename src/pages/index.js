@@ -59,13 +59,13 @@ class BlogIndex extends React.Component {
             style={{
               marginLeft: `auto`,
               marginRight: `auto`,
-              maxWidth: rhythm(34),
+              maxWidth: rhythm(31),
             }}
           >
-            WeTennis is community and performance based platform for amateur tennis players worldwide. No matter your age or ability, our app is designed to make you feel more like
+            WeTennis is community and performance based platform for amateur tennis players. No matter your age or ability, our app is designed to make you feel more like
             <div />
             <TextLoop className={"typingNames"} interval={1000} fade>
-              <span>Roger Federerr</span>
+              <span>Roger Federer</span>
               <span>Serena Williams</span>
               <span>Novak Djokovic</span>
               <span>Naomi Osaka</span>
@@ -92,7 +92,7 @@ class BlogIndex extends React.Component {
             </div>
           </Popup>
 
-          <Button title="learn more about us" link="/about" />
+          <Button title="learn more about us" link="/our-mission" />
         </SectionBlock>
 
         <SectionBlock id="vision">
@@ -115,8 +115,7 @@ class BlogIndex extends React.Component {
                     maxWidth: rhythm(14),
                   }}
                 >
-                  invite your tennis friends and keep updated on their tennis
-                  activity
+                   follow players to stay updated on their tennis activity and news about their on-court stats
                 </p>
               </div>
               <div class="half phone-box">
@@ -126,27 +125,22 @@ class BlogIndex extends React.Component {
                 />
               </div>
             </div>
+            
+
             <div class="container">
               <div class="half slide-text">
-                <h2
-                  style={{
-                    maxWidth: rhythm(22),
-                  }}
-                >
-                  DISCOVER NEW PLAYERS
-                </h2>
+                <h2>Display & compare match stats</h2>
                 <p
                   style={{
-                    maxWidth: 360,
+                    maxWidth: 400,
                   }}
                 >
-                  search players and groups to interact with your local
-                  community
+                  track stats like your match wins, deciding set record and more and compare them with your friends in a head to head format 
                 </p>
               </div>
               <div class="half phone-box">
                 <Image
-                  fluid={data.discover.childImageSharp.fluid}
+                  fluid={data.compare.childImageSharp.fluid}
                   alt="Fell like Pro"
                 />
               </div>
@@ -154,19 +148,24 @@ class BlogIndex extends React.Component {
 
             <div class="container">
               <div class="half slide-text">
-                <h2>COMPARE HISTROY</h2>
-                <p
+                <h2
                   style={{
-                    maxWidth: 400,
+                    maxWidth: rhythm(22),
                   }}
                 >
-                  create long lasting rivalries with friends and compare histroy
-                  of matches played
+                   Discover your local community
+                </h2>
+                <p
+                  style={{
+                    maxWidth: 360,
+                  }}
+                >
+                  find nearby players, courts and groups for pick up games
                 </p>
               </div>
               <div class="half phone-box">
                 <Image
-                  fluid={data.compare.childImageSharp.fluid}
+                  fluid={data.discover.childImageSharp.fluid}
                   alt="Fell like Pro"
                 />
               </div>
@@ -180,8 +179,7 @@ class BlogIndex extends React.Component {
                     maxWidth: 445,
                   }}
                 >
-                  create custom groups to gain and lose points, so you’ll have
-                  to fight to stay on top
+                  create custom groups with attached leaderboard to gain and loss points just like the pros. 
                 </p>
               </div>
               <div class="half phone-box">
@@ -192,7 +190,7 @@ class BlogIndex extends React.Component {
               </div>
             </div>
 
-            <div class="container">
+            {/* <div class="container">
               <div class="half slide-text">
                 <h2>
                   DISPLAY<div /> STATS
@@ -212,7 +210,7 @@ class BlogIndex extends React.Component {
                   alt="Fell like Pro"
                 />
               </div>
-            </div>
+            </div> */}
           </AliceCarousel>
         </SectionBlock>
 

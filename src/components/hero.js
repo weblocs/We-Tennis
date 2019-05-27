@@ -44,7 +44,8 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   justify-content: center;
   h1 {
     color: #fff;
-    font-size: 110px;
+    font-size: 80px;
+    margin-bottom: 45px;
     text-transform: uppercase;
     font-style: italic;
     font-weight: 700;

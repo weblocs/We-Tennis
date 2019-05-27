@@ -52,6 +52,7 @@ class About extends React.Component {
         <SectionBlock 
           id="app"
         >
+        
             <h2>it all started with an idea <span>💡</span></h2>
             <h3>#TeamWorkMakesTheDreamWork</h3>
             <p style={{
@@ -76,6 +77,8 @@ class About extends React.Component {
             providing the best tennis experience get in touch.</p>
 
                   <button className="btn"> become part of the journey </button>
+
+                  
             
         </SectionBlock>
         
@@ -84,6 +87,7 @@ class About extends React.Component {
         
         <SectionBlock
         id="contact">
+        
             <h2>get in touch <span>👋</span></h2>
             <h3>#GotQuestions</h3>
             <p style={{

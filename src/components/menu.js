@@ -41,7 +41,7 @@ function Menu({ title, link, menu }) {
       <div className={styles.innerNav}>
 
       <Link
-          to="/about"
+          to="/our-mission"
           activeClassName="active"
         >
           features
@@ -71,7 +71,7 @@ function Menu({ title, link, menu }) {
         intro
         </Link>
         <Link
-          to="/about"
+          to="/our-mission"
           activeClassName="active"
         >
           about

@@ -47,14 +47,6 @@ class MenuAbout extends React.Component {
                     />
                   </div>
 
-                  <Link
-                    className="onlyDesktop"
-                    to="/our-mission"
-                    activeClassName="active"
-                  >
-                    mission
-                  </Link>
-
                   <LinkTo
                     className="onlyDesktop"
                     to="app"
@@ -66,6 +58,16 @@ class MenuAbout extends React.Component {
                   >
                     features
                   </LinkTo>
+
+                  <Link
+                    className="onlyDesktop"
+                    to="/our-mission"
+                    activeClassName="active"
+                  >
+                    mission
+                  </Link>
+
+                  
 
                   <LinkTo
                     className="onlyDesktop"
@@ -84,14 +86,8 @@ class MenuAbout extends React.Component {
               
               <div className={`${styles.mobileMenu} ${!this.state.active ? styles.hide : ''}`} >
               <div className={styles.mobileInner}>
-                <Link to="/our-mission" activeClassName="active" 
-                onClick={() =>
-                  this.setState({ active: !this.state.active })
-                } >
-                  mission
-                </Link>
-
-                <LinkTo
+                
+              <LinkTo
                   to="app"
                   spy={true}
                   smooth={true}
@@ -104,6 +100,15 @@ class MenuAbout extends React.Component {
                 >
                   features
                 </LinkTo>
+                
+                <Link to="/our-mission" activeClassName="active" 
+                onClick={() =>
+                  this.setState({ active: !this.state.active })
+                } >
+                  mission
+                </Link>
+
+                
 
                 <LinkTo
                   to="contact"
