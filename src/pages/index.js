@@ -65,7 +65,7 @@ class BlogIndex extends React.Component {
             WeTennis is community and performance based platform for amateur tennis players worldwide. No matter your age or ability, our app is designed to make you feel more like
             <div />
             <TextLoop className={"typingNames"} interval={1000} fade>
-              <span>Roger Federer</span>
+              <span>Roger Federerr</span>
               <span>Serena Williams</span>
               <span>Novak Djokovic</span>
               <span>Naomi Osaka</span>
